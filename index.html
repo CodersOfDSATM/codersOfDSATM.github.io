@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+  <!-- minified JavaScript -->
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="black">
+  <title>/CodeClub/</title>
+  <style type="text/css">
+    body {
+      font-family: 'Nunito', sans-serif;
+    }
+
+    .site-header {
+      height: 100%;
+      width: 100%;
+      position: relative;
+      display: inline-block;
+    }
+
+    #nav-logo {
+      height: 70px;
+      width: 70px;
+margin-left: 12px;
+margin-top: 12px;
+    }
+
+    nav {
+      background-color: transparent;
+    }
+
+    .btnHeader {
+      border: 1px solid white;
+      border-radius: 40px;
+      border-color: white;
+      background-color: transparent;
+      color: white;
+      text-align: center;
+
+    }
+
+    .btnHeader:hover {
+      background-color: white;
+      color: black;
+    }
+
+    .head-Text {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      color: white !important;
+
+    }
+
+    .bgvid {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: -1;
+    }
+
+    @keyframes rainbow {
+      0% {
+        background-position: 0% 100%;
+      }
+
+      50% {
+        background-position: 100% 200%;
+      }
+
+      100% {
+        background-position: 0% 100%;
+      }
+    }
+
+    .rainbow-progress-bar-home {
+      position: relative;
+      left: 0;
+      right: 0;
+      bottom: 0px !important;
+
+      width: 100%;
+      height: 2px;
+
+      background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+      background-size: 900% 900%;
+
+      animation: rainbow 9s ease infinite;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="site-header ">
+          <div class="rainbow-progress-bar-home" style>
+    <div class="col s12 m6 vidcont">
+
+      </div>
+      <video id="vid1" autoplay loop muted style="filter:blur(1px);" class="bgvid hide-on-med-and-down">
+        <source src="/desk_video.mp4" type="video/mp4">
+      </video>
+      <video id="vid2" autoplay muted loop style="filter:blur(1px);" class="bgvid show-on-small hide-on-med-and-up">
+        <source src="/mob_video.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div calss="head-text">
+      <nav>
+        <div class="nav-wrapper">
+          <div class="brand-logo left"><img id="nav-logo"
+              src="/logo.png" /></div>
+          <a href="#" data-target="slide-out" class="sidenav-trigger right"><i class="material-icons">menu</i></a>
+
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a class="btn btnHeader" href="sass.html">Projects</a></li>
+            <li><a class="btn btnHeader" href="badges.html">Workshops</a></li>
+            <li><a class="btn btnHeader" href="collapsible.html">About</a></li>
+          </ul>
+          <div class='rainbow-progress-bar-home' style='' />
+        </div>
+      </nav>
+      <div class="headText" style="color: white;padding: 12px; margin-bottom: 10px; margin-top: 12%">
+        <center>
+          <h3>/CodeClub/<sub style="font-size: 22px">Dsatm</sub></h3>
+        </center>
+      </div>
+      <div class="about-header container" style=" color: white; font-size: 20px; font-weight: 100">
+        <center>
+          <h4 style="display: inline">/CodeClub/</h4> is a project run by the students of DSATM to promote open-source
+          culture and help learn about programming by contributing to projects powered By Mozilla Campus Club
+        </center>
+      </div>
+      <div class="row" style="margin-top: 14%;">
+        <center><a style="font-size: 22px; color: white; font-weight: bold">Powered By <img
+              src="https://campus.mozilla.community/static/img/clubs.svg" style="vertical-align: middle;"></a></center>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+  </div>
+  <!---SideNav-->
+  <ul id="slide-out" class="sidenav">
+    <li>
+      <div class="user-view">
+        <div class="background">
+          <img src="images/office.jpg">
+        </div>
+        <a href="#user"><img class="circle" src="images/yuna.jpg"></a>
+        <a href="#name"><span class="white-text name">John Doe</span></a>
+        <a href="#email"><span class="white-text email">jdandturk@gmail.com</span></a>
+      </div>
+    </li>
+    <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
+    <li><a href="#!">Second Link</a></li>
+    <li>
+      <div class="divider"></div>
+    </li>
+    <li><a class="subheader">Subheader</a></li>
+    <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+  </ul>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $('.sidenav').sidenav();
+
+    });
+  </script>
+</body>
+
+</html>
